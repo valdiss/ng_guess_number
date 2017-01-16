@@ -2,6 +2,10 @@ div{
   text-align: center;
 }
 
+input {
+  font-size: 1.2em;
+}
+
 button {
   padding: 5px 10px;
 }

@@ -10,10 +10,15 @@
     <div ng-controller="GuessController" class="ng-cloak">
       <h1>Guess the number! It's between 0 and 100</h1>
       <form ng-submit ="guessTheNumber()" method="submit">
-        <input ng-model ="guess" type="number" name="name" value="" max="100" min="0" required>
+        <input ng-model ="guess" type="number" name="name" ng-disabled  ='disable' value="" max="100" min="0" required>
         <button  type="submit" name="button">Check number</button>
       </form>
+      <p>
+        You have {{turn_count}} try left!
+      </p>
       <p>{{indication}}</p>
+      <button id="reset" type="button" name="button">Reset</button>
+      
     </div>
   </body>
   <script src="js/angular.js" charset="utf-8"></script>
