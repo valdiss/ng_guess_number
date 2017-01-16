@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="GuessApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Guess the number</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico">
+  </head>
+  <body>
+    <div ng-controller="GuessController" class="ng-cloak">
+      <h1>Guess the number! It's between 0 and 100</h1>
+      <form ng-submit ="guessTheNumber()" method="submit">
+        <input ng-model ="guess" type="number" name="name" value="" max="100" min="0" required>
+        <button  type="submit" name="button">Check number</button>
+      </form>
+      <p>{{indication}}</p>
+    </div>
+  </body>
+  <script src="js/angular.js" charset="utf-8"></script>
+  <script src="js/app.js" charset="utf-8"></script>
+</html>
